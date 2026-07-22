@@ -81,10 +81,10 @@ int main() {
 
             int itemA = (1 << i); // Transforma o índice do item A no seu bit correspondente
             int itemB = (1 << j); // Transforma o índice do item B no seu bit correspondente
-            int itemset = itemA | itemB; // Cria a união lógica dos dois itens para a regra
+            int conjunto_itens = itemA | itemB; // Cria a união lógica dos dois itens para a regra
 
             // Calcula qual é a presença dos dois itens juntos na base de dados inteira
-            double sup_uniao = calcular_suporte(itemset, transacoes, num_transacoes);
+            double sup_uniao = calcular_suporte(conjunto_itens, transacoes, num_transacoes);
             
             // só avança caso a dupla atenda ao mínimo exigido
             if (sup_uniao >= min_sup) {
