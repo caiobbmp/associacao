@@ -22,7 +22,7 @@ double calcular_suporte(int itemset, int bd[], int num_transacoes) {
 
 
 double calcular_confianca(int antecedente, int consequente, int bd[], int num_transacoes) {
-    int uniao = antecedente | consequente; // OR bit a bit para unir os conjuntos
+    int uniao = antecedente | consequente; 
 
     double suporte_antecedente = calcular_suporte(antecedente, bd, num_transacoes);
     double suporte_uniao = calcular_suporte(uniao, bd, num_transacoes);
@@ -73,7 +73,7 @@ int main() {
     scanf("%lf", &min_sup);
     printf("Digite a Confianca minima desejada (ex: 0.5 para 50%%): ");
     scanf("%lf", &min_conf);
-    printf("\n--- Gerando Regras de Associacao (Apriori 2-Itemsets) ---\n");
+    printf("\n--- Gerando Regras de Associacao  ---\n");
 
     int regras_encontradas = 0;
 
