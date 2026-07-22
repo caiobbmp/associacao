@@ -9,12 +9,12 @@
 const char* nomes_itens[] = {"Leite", "Cafe", "Cerveja", "Pao", "Manteiga", "Arroz", "Feijao"};
 
 // a frequência (Suporte) em que um conjunto aparece nas compras
-double calcular_suporte(int itemset, int bd[], int num_transacoes) {
+double calcular_suporte(int conjunto_itens, int bd[], int num_transacoes) {
     int contagem = 0; //  contador de aparições
     
     for (int i = 0; i < num_transacoes; i++) { // percorre as transacoes
         //se os bits do baterem exatamente com os bits acesos da transação, então o conjunto todo está lá dentro
-        if ((bd[i] & itemset) == itemset) {
+        if ((bd[i] & conjunto_itens) == conjunto_itens) {
             contagem++; // contabilizado
         }
     }
